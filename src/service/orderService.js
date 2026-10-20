@@ -50,12 +50,10 @@ function listOrders() {
     return store.list();
 }
 
-// undefined, якщо не знайдено
 function getOrder(id) {
     return store.get(id);
 }
 
-// true, якщо видалено; false, якщо такого id немає
 function deleteOrder(id) {
     return store.remove(id);
 }

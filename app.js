@@ -27,7 +27,6 @@ app.use((req, res) => {
   });
 });
 
-// Чотири параметри обов'язкові: так Express розпізнає обробник помилок.
 app.use((error, req, res, next) => {
   if (error instanceof SyntaxError && error.status === 400 && "body" in error) {
     return res.status(400).json(
